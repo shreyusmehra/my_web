@@ -84,20 +84,22 @@ a{
 .projects-container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .projects-container .projects{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .single-project{
   border: 2px solid #000;
   border-radius: 5px;
-  margin: 10px auto;
+  margin: 10px;
   padding: 20px;
   width: 20rem;
+  cursor: pointer;
 }
 
 .single-project:hover{
@@ -111,6 +113,7 @@ h4 {
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
+  margin-top: 5px;
   margin-bottom: 0.75rem;
 }
 
@@ -133,6 +136,61 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.input-name,.input-email,.input-message{
+  margin: 5px auto;
+  padding: 10px;
+  width: 15rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.send-message-btn{
+  border: 2px solid var(--clr-primary-5);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 8px 16px;
+  background: var(--clr-primary-5);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--clr-white);
+}
+
+.send-message-btn:hover{
+  background: var(--clr-primary-4);
+  border: 2px solid var(--clr-primary-4);
+}
+
+.message-sent-container{
+  color: darkgreen;
+  border: 2px solid lightgreen;
+  background: lightgreen;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.message{
+  font-weight: 500;
+}
+.message-close-btn-container{
+  margin-left: 28rem;
+}
+.message-close-btn{
+  margin: 10px auto;
+  border: 2px solid lightgreen;
+  background: lightgreen;
+  fill: lightgreen;
+  cursor: pointer;
+  font-size: large;
 }
 
 @media screen and (min-width: 800px) {
@@ -231,7 +289,19 @@ nav {
 }
 
 .social-icons {
-  display: none;
+  display: flex;
+  justify-content: center;
+  font-size:x-large;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: var(--clr-primary-1);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--clr-primary-5);
 }
 
 .links-container {

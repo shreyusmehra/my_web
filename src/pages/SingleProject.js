@@ -6,7 +6,7 @@ const SingleProject = () => {
   const project = projects.find((project) => project.id === projectId);
   const { name, Github } = project;
   return (
-    <section className="section project">
+    <section className="section-project">
       <h3>{name}</h3>
       <h4>
         Github Repo Link:
