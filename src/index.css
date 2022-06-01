@@ -84,6 +84,7 @@ a{
 .projects-container{
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .projects-container .projects{
@@ -97,7 +98,7 @@ a{
   border: 2px solid #000;
   border-radius: 5px;
   margin: 10px;
-  padding: 20px;
+  padding: 100px;
   width: 20rem;
   cursor: pointer;
 }

@@ -1,9 +1,18 @@
+import { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 
 const MessageAlert = ({ sendAlert, setSendAlert }) => {
   const handleClick = () => {
     setSendAlert(null);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      handleClick();
+    }, [3000]);
+    //eslint-disable-next-line
+  }, [sendAlert]);
+
   return (
     <div className="message-sent-container">
       <div className="message">{sendAlert}</div>
