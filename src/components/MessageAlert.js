@@ -7,9 +7,13 @@ const MessageAlert = ({ sendAlert, setSendAlert }) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      handleClick();
-    }, [3000]);
+    const MessageTimer = () => {
+      setTimeout(() => {
+        handleClick();
+      }, [3000]);
+    };
+    MessageTimer();
+    clearTimeout(MessageTimer);
     //eslint-disable-next-line
   }, [sendAlert]);
 

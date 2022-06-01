@@ -1,12 +1,20 @@
-import { useState } from "react";
 import MessageAlert from "../components/MessageAlert";
+import { useGlobalContext } from "../context";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [sendAlert, setSendAlert] = useState(null);
-  const [error, setError] = useState(null);
+  const {
+    name,
+    setName,
+    email,
+    setEmail,
+    message,
+    setMessage,
+    sendAlert,
+    setSendAlert,
+    error,
+    setError,
+  } = useGlobalContext();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name && !email && !message) {
