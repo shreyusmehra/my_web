@@ -8,7 +8,7 @@ const AppProvider = ({ children }) => {
   const [message, setMessage] = useState("");
   const [sendAlert, setSendAlert] = useState(null);
   const [error, setError] = useState(null);
-  const [detailId, setDetailId] = useState(1);
+  const [detailId, setDetailId] = useState(2);
 
   return (
     <AppContext.Provider

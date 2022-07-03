@@ -82,10 +82,97 @@ a{
   text-decoration: none;
 }
 
-
-
 .navbar-link{
   text-decoration: none;
+}
+
+.home-container{
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.intro-image-container img{
+  border-radius: 10px;
+}
+
+.intro-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.intro-container h3{
+  font-size: 3rem;
+}
+
+.intro-container p{
+  font-size: large;
+  color: var(--clr-grey-2);
+}
+
+#tag1,#tag2{
+  font-size: larger;
+text-transform: uppercase;
+}
+
+.quote-container{
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.interest-title{
+  border-top: 2px solid var(--clr-grey-2);
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.interests-container{
+  border-top: 2px solid var(--clr-grey-2);
+  padding: 20px 0px 20px 0px;
+  background-color: var(--clr-grey-9);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.interest{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.interest p{
+  color: var(--clr-grey-1);
+  font-size: large;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.about-navigate{
+  width: 20%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--clr-primary-8);
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.about-navigate:hover {
+  color: var(--clr-primary-2);
+  background-color: var(--clr-grey-10);
 }
 
 .projects-container{
@@ -120,7 +207,7 @@ a{
   margin: 10px;
   padding: 100px;
   width: 20rem;
-  background-color: var(--clr-white);
+  background-color: var(--clr-primary-9);
 }
 
 .single-project:hover{
@@ -134,6 +221,7 @@ a{
   padding: 10px 15px;
   font-weight: 500;
   cursor: pointer;
+  background-color: var(--clr-white);
 }
 
 .explore-container:hover{
@@ -211,6 +299,10 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
+}
+
+.contact-form{
+  margin: 0px 0px 100px 0px;
 }
 
 .title-page{

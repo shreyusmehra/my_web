@@ -7,7 +7,7 @@ export const projects = [
   {
     id: "FirstProject",
     name: "Food App",
-    Github: "https://www.github.com",
+    Github: "https://github.com/shreyusmehra/food_app_api",
     techstack: "MERN Stack",
     description:
       "Food App is my ongoing project, it uses ReactJS for frontend and nodeJS(express) for backend and mongodb as database. You can add new food items to the database, get food items, delete food items and update existing items.It has authenication and authorization and user which has correct id and password will be allowed to edit items in the database.",
@@ -15,7 +15,8 @@ export const projects = [
   {
     id: "SecondProject",
     name: "Recipe App",
-    Github: "https://www.github.com",
+    Github:
+      "https://github.com/shreyusmehra/CipherSchools/tree/master/assignment_3",
     techstack: "ReactJS",
     description:
       "Recipe App is a web app which is made by using ReactJS, it has dummy login/signup page ,you can store your recipes in it.",
@@ -23,7 +24,8 @@ export const projects = [
   {
     id: "ThirdProject",
     name: "Todo App",
-    Github: "https://www.github.com",
+    Github:
+      "https://github.com/shreyusmehra/CipherSchools/tree/master/assignment_2",
     techstack: "ReactJS",
     description:
       "Todo App is a simple web app in which can store your daily tasks and it can filter the tasks which are complete or not.",
@@ -56,7 +58,7 @@ export const links = [
 export const social = [
   {
     id: 1,
-    url: "https://www.github.com",
+    url: "https://github.com/shreyusmehra",
     icon: <FaGithub />,
   },
   {

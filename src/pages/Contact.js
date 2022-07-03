@@ -27,7 +27,7 @@ const Contact = () => {
     setMessage("");
   };
   return (
-    <form>
+    <form className="contact-form">
       <div className="title-page">
         {sendAlert && (
           <MessageAlert sendAlert={sendAlert} setSendAlert={setSendAlert} />
