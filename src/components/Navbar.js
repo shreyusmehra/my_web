@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <h4>My Website</h4>
+          <h4>Shreyus's Portfolio</h4>
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}
@@ -29,7 +29,6 @@ const Navbar = () => {
             <FaBars />
           </button>
         </div>
-
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
             {links.map((link) => {

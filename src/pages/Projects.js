@@ -11,13 +11,16 @@ const Projects = () => {
       <h2>My Projects</h2>
       <div className="projects">
         {projects.map((project) => {
+          const { id, name } = project;
           return (
-            <article
-              key={project.id}
-              className="single-project"
-              onClick={() => handleClick(project.id)}
-            >
-              <h3>{project.name}</h3>
+            <article key={id} className="single-project">
+              <h3>{name}</h3>
+              <div
+                className="explore-container"
+                onClick={() => handleClick(id)}
+              >
+                Explore
+              </div>
             </article>
           );
         })}

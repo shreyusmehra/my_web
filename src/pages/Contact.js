@@ -17,7 +17,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!name && !email && !message) {
+    if (!name || !email || !message) {
       return setError("Enter in all the given fields");
     }
     setError(null);
@@ -39,24 +39,22 @@ const Contact = () => {
         <input
           type={"text"}
           placeholder="Name"
-          required={true}
+          required
           className="input-name"
-          minLength={3}
-          maxLength={50}
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type={"email"}
           placeholder="Email"
-          required={true}
+          required
           className="input-email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           placeholder="Type your message"
-          required={true}
+          required
           className="input-message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}

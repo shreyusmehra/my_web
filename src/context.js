@@ -8,6 +8,7 @@ const AppProvider = ({ children }) => {
   const [message, setMessage] = useState("");
   const [sendAlert, setSendAlert] = useState(null);
   const [error, setError] = useState(null);
+  const [detailId, setDetailId] = useState(1);
 
   return (
     <AppContext.Provider
@@ -22,6 +23,8 @@ const AppProvider = ({ children }) => {
         setSendAlert,
         error,
         setError,
+        detailId,
+        setDetailId,
       }}
     >
       {children}
