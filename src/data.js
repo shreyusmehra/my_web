@@ -63,7 +63,7 @@ export const social = [
   },
   {
     id: 2,
-    url: "https://www.linkedin.com",
+    url: "https://www.linkedin.com/in/shreyus-mehra-23b861192/",
     icon: <FaLinkedin />,
   },
 ];
