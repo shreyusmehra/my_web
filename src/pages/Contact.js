@@ -29,9 +29,7 @@ const Contact = () => {
   return (
     <form className="contact-form">
       <div className="title-page">
-        {sendAlert && (
-          <MessageAlert sendAlert={sendAlert} setSendAlert={setSendAlert} />
-        )}
+        {sendAlert && <MessageAlert />}
         <h2>Contact</h2>
       </div>
       <div className="input-fields">

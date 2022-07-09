@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
+import { useGlobalContext } from "../context";
 
-const MessageAlert = ({ sendAlert, setSendAlert }) => {
+const MessageAlert = () => {
+  const { sendAlert, setSendAlert } = useGlobalContext();
   const handleClick = () => {
     setSendAlert(null);
   };
