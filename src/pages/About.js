@@ -2,6 +2,7 @@ import Details from "../components/Details";
 import TechStack from "../components/TechStack";
 import { useGlobalContext } from "../context";
 import { details } from "../data";
+import { motion } from "framer-motion";
 
 const About = () => {
   const { setDetailId } = useGlobalContext();
@@ -9,10 +10,29 @@ const About = () => {
   const handleClick = (id) => {
     setDetailId(id);
   };
+
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
   return (
     <div className="about-container">
-      <div className="about-title">About</div>
-      <div className="about">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ ease: "easeIn", duration: 1 }}
+        className="about-title"
+      >
+        About
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ ease: "easeIn", duration: 1, delay: 1 }}
+        className="about"
+      >
         {details.map((detail) => {
           const { id, title } = detail;
           return (
@@ -25,7 +45,7 @@ const About = () => {
             </article>
           );
         })}
-      </div>
+      </motion.div>
       <Details />
       <TechStack />
     </div>

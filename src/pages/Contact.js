@@ -1,5 +1,6 @@
 import MessageAlert from "../components/MessageAlert";
 import { useGlobalContext } from "../context";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const {
@@ -26,13 +27,31 @@ const Contact = () => {
     setEmail("");
     setMessage("");
   };
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
   return (
     <form className="contact-form">
       <div className="title-page">
         {sendAlert && <MessageAlert />}
-        <h2>Contact</h2>
+        <motion.h2
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ ease: "easeIn", duration: 1 }}
+        >
+          Contact
+        </motion.h2>
       </div>
-      <div className="input-fields">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        transition={{ ease: "easeIn", duration: 1, delay: 1 }}
+        className="input-fields"
+      >
         <p style={{ color: "red" }}>{error}</p>
         <input
           type={"text"}
@@ -57,10 +76,25 @@ const Contact = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-      </div>
-      <button type="submit" className="send-message-btn" onClick={handleSubmit}>
+      </motion.div>
+      <motion.button
+        animate={{ x: [-1200, 0], opacity: 1 }}
+        transition={{
+          delay: 1,
+          x: { type: "spring", stiffness: 100 },
+          default: { duration: 2 },
+        }}
+        whileHover={{
+          scale: 1.1,
+          transition: { duration: 0.5 },
+        }}
+        whileTap={{ scale: 0.9 }}
+        type="submit"
+        className="send-message-btn"
+        onClick={handleSubmit}
+      >
         Send Message
-      </button>
+      </motion.button>
     </form>
   );
 };

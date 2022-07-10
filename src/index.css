@@ -460,6 +460,8 @@ p {
   background-color: var(--clr-white);
   border-radius: 10px;
   color: var(--clr-black);
+  box-shadow: var(--dark-shadow),
+      var(--dark-shadow);
 }
 
 .skill-container i{

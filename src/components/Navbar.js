@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { links, social } from "../data";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -18,7 +19,10 @@ const Navbar = () => {
   }, [showLinks]);
 
   return (
-    <nav>
+    <motion.nav
+      animate={{ y: [-100, 0] }}
+      transition={{ ease: "easeIn", duration: 2 }}
+    >
       <div className="nav-center">
         <div className="nav-header">
           <h4>Shreyus's Portfolio</h4>
@@ -56,7 +60,7 @@ const Navbar = () => {
           })}
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

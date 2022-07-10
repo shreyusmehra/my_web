@@ -6,13 +6,14 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import SharedLayout from "./pages/SharedLayout";
 import SingleProject from "./pages/SingleProject";
+import Loading from "./components/Loading";
 const Contact = lazy(() => import("./pages/Contact"));
 
 const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<SharedLayout />}>
               <Route index element={<Home />} />

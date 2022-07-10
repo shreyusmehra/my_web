@@ -12,7 +12,7 @@ const MessageAlert = () => {
     const MessageTimer = () => {
       setTimeout(() => {
         handleClick();
-      }, [3000]);
+      }, [5000]);
     };
     MessageTimer();
     clearTimeout(MessageTimer);
